@@ -1,5 +1,5 @@
 let app = document.getElementById("app");
-app.style.marginTop = "25vh";
+app.style.marginTop = "15vh";
 
 let nuevoDiv = document.createElement("div");
 nuevoDiv.setAttribute("class", "container text-center card p-4 ");
@@ -7,14 +7,14 @@ nuevoDiv.setAttribute("style", "max-width: 30vw");
 app.appendChild(nuevoDiv);
 
 let banderaParentesis = true;
-let banderaOscura = true;
+let banderaOscura = false;
 
 let teclas = [
     "C", "/", "*", "CE", 
     "7", "8", "9", "-",
     "4", "5", "6", "+",
     "1", "2", "3", "()",
-    "0", ".", "+-", "="];
+    "0", ".", "^", "="];
 
 let contenedorTema;
 let campoValores;
@@ -77,6 +77,9 @@ for (let i = 0; i < teclas.length; i++) {
         case(15):
                 nuevoBoton.addEventListener("click", termino);
                 break;
+        case(18):
+                nuevoBoton.addEventListener("click", factorial);
+                break;
         case(19):
             nuevoBoton.addEventListener("click", calcular);
             break;
@@ -88,6 +91,10 @@ for (let i = 0; i < teclas.length; i++) {
     }
 
     seccion.appendChild(nuevoBoton);
+}
+
+function factorial() {
+    campoValores.value += "**";
 }
 
 function termino() {
@@ -139,3 +146,5 @@ function cambiarTema() {
     }
     banderaOscura = !banderaOscura;
 }
+
+cambiarTema();
