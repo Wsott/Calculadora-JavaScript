@@ -50,7 +50,7 @@ for (let i = 0; i < 3; i++) {
             campoResultado.setAttribute("class", "my-3 row form-control text-center");
             campoResultado.setAttribute("readonly", true);
             campoResultado.setAttribute("style", "font-weight: bolder;");
-            campoResultado.value = "Resultado: 0";
+            campoResultado.value = "Resultado anterior: 0";
             contenedorTema.appendChild(campoResultado);
             break;
     }
@@ -103,8 +103,11 @@ function termino() {
 }
 
 function calcular() {
-    campoResultado.value = "Resultado: " + eval(campoValores.value);
+    let resultado = parseFloat(eval(campoValores.value).toFixed(3));
+
+    campoResultado.value = "Resultado anterior: " + resultado;
     borrarTodo();
+    campoValores.value += resultado;
 }
 
 function agregarNumero(valor) {
@@ -148,3 +151,12 @@ function cambiarTema() {
 }
 
 cambiarTema();
+
+
+/*
+se puede poner las operaciones antes que los numeros
+los puntos tambien
+si la cadena es muy larga tira ese error
+la potencia no anda
+estaria bueno que si haces una operacion se pueda utilizar el resultado para hacer otra
+*/
