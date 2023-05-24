@@ -151,12 +151,3 @@ function cambiarTema() {
 }
 
 cambiarTema();
-
-
-/*
-se puede poner las operaciones antes que los numeros
-los puntos tambien
-si la cadena es muy larga tira ese error
-la potencia no anda
-estaria bueno que si haces una operacion se pueda utilizar el resultado para hacer otra
-*/
