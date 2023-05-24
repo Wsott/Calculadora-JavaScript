@@ -1,3 +1,9 @@
+/*
+Nombre completo: Gomez Olivera, Emiliano
+Repositorio de la calculadora: https://github.com/Wsott/Calculadora-JavaScript
+Github page: https://wsott.github.io/Calculadora-JavaScript/
+*/
+
 let app = document.getElementById("app");
 app.style.marginTop = "15vh";
 
